@@ -1,6 +1,7 @@
 items = ["veg sandwich", "masala dosa", "chole rice", "paneer roll", "tea"]
 price =[60, 80, 90, 100, 20]
-print("Smart Canteen")
+print("____Smart Canteen____")
+
 for i in range(len(items)):
     print(f"{i+1}. {items[i]} - {price[i]}")
 
@@ -28,10 +29,20 @@ while True:
         print("no more input")
         break
 
+if total >= 500:
+    discount = (10/100) * total
+elif total >= 250:
+    discount = (5/100) * total
+else:
+    discount = 0   
+
+subtotal = total - discount
 
 print("____receipt____")
 
 print(f"{receipt} = {cost_add}")
-print(total)
+print("Total amount", total)
+print("Discount applied", discount)
+print("Amount after discount", subtotal)
 
 
